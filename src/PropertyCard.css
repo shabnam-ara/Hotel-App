@@ -21,6 +21,7 @@
   .property-card h2 {
     font-size: 1.2rem;
     margin: 10px 0;
+    margin-right: 100px;
   }
   
   .property-card p {
@@ -59,24 +60,27 @@
     justify-content: space-between;
     align-items: center;
   }
-
-.last-detail{
+/* Add this to your App.css or your CSS file */
+.last-detail {
+  display: flex;
   justify-content: space-between;
- margin-right: 280px;
- font-size: 16px;
-
+  align-items: center;
 }
-.last-detail button {
-  position: absolute;
-  margin-left: 190px;
-  background-color: white;
-  color:#1100ff;
+
+.price {
+  margin: 0; 
+}
+
+.book-now {
+  background-color: #007bff; 
+  color: white;
+  border: none; 
+  padding: 5px 10px; 
+  cursor: pointer;
+  border-radius: 20px;
   padding: 10px;
-  border-radius: 10px;
-
 }
 
-/* PropertyCard.css */
 .image-container {
   position: relative;
 }
@@ -105,4 +109,13 @@ right: 30px;
   color: #1100ff;
   padding: 8px;
   
+}
+.location {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-right: 90px;
+}
+.location-icon {
+  color: rgb(240, 154, 122);
 }

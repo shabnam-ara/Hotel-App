@@ -17,7 +17,10 @@ const PropertyCard = ({ property }) => {
         <FavoriteBorderIcon className="FavoriteBorderIcon"/>
         <img src={property.image} alt={property.name} />
       </div>
-      <LocationOnIcon className="location-icon" />8558 Pecan St. 
+      <div className="location">
+  <LocationOnIcon className="location-icon" />
+  {property.location}
+</div>
       <div className="property-name">
         <h2>{property.name}</h2>
       </div>
@@ -34,9 +37,9 @@ const PropertyCard = ({ property }) => {
         <h4>732 sft</h4>
       </div>
       <hr/>
-      <div className='last-detail'>
-        $7,255 /month
-        <button>Book Now</button>
+      <div className="last-detail">
+        <h3 className="price">$7,255 /month</h3>
+        <button className="book-now">Book Now</button>
       </div>
     </div>
   );

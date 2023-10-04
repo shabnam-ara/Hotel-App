@@ -1,21 +1,20 @@
-// CityTabs.js
 import React from 'react';
-import "./CityTabs.css";
+import './CityTabs.css';
 
-const CityTabs = ({ cities, onTabClick }) => {
+function CityTabs({ cities, onTabClick, activeCity }) {
   return (
-    <div className="city-tabs">
-      {cities.map((city, index) => (
+    <div className='city-tabs'>
+      {cities.map((city) => (
         <div
-          key={index}
-          className="city-tab"
-          onClick={() => onTabClick(city)} // Call the onTabClick function on click
+          key={city}
+          className={`city-tab ${city === 'London' ? 'active' : ''}`}
+          onClick={() => onTabClick(city)}
         >
           {city}
         </div>
       ))}
     </div>
   );
-};
+}
 
 export default CityTabs;
